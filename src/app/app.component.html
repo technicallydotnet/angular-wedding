@@ -1,0 +1,43 @@
+<h1>Angular Wedding app :)</h1>
+<h3>Your budget is :{{v}}</h3>
+<mat-form-field>
+  <mat-label>Budget</mat-label>
+  <mat-select>
+    <mat-option *ngFor="let b of budget" [value]="b">{{b}}</mat-option>
+  </mat-select>
+</mat-form-field>
+<h3>When do you want your wedding to take place?</h3>
+<input type="date">
+<button mat-button (click)="saveAsPDF()">Save as PDF</button>
+<mat-tab-group>
+<mat-tab label="Guests">
+  <guest></guest>
+</mat-tab>
+<mat-tab label="Ceremony">
+  <ceremony></ceremony>
+</mat-tab>
+<mat-tab label="Reception">
+  <reception></reception>
+</mat-tab>
+<mat-tab label="Other">
+  <other></other>
+</mat-tab>
+</mat-tab-group>
+
+<!--<mat-expansion-panel>
+  <mat-expansion-panel-header>Guests</mat-expansion-panel-header>
+  <guest></guest>
+</mat-expansion-panel>
+<mat-expansion-panel>
+  <mat-expansion-panel-header>Ceremony</mat-expansion-panel-header>
+  <ceremony></ceremony>
+</mat-expansion-panel>
+<mat-expansion-panel>
+  <mat-expansion-panel-header>Reception</mat-expansion-panel-header>
+  <reception></reception>
+</mat-expansion-panel>
+<mat-expansion-panel>
+  <mat-expansion-panel-header>Other</mat-expansion-panel-header>
+  <other></other>
+</mat-expansion-panel>-->
+
